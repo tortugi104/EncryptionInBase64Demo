@@ -16,14 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //To Encode
+    NSString *stringInBase64 = [self encodeStringTo64:@"STRING YOU WANT TO ENCODE"];
+    
+    //To decode
+    NSString *decodedString = [self decodeString:stringInBase64];
+    NSLog(@"%@",decodedString);
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//Encoding
+- (NSString *)encodeStringTo64:(NSString *)stringToBeEncoded {
+    return [stringToBeEncoded stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
+
+//Decoding
+-(NSString *)decodeString:(NSString *)stringToBeDecoded {
+    NSString *result = [stringToBeDecoded stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+    result = [result stringByRemovingPercentEncoding];
+    return result;
+}
+
+
+
 
 
 @end
