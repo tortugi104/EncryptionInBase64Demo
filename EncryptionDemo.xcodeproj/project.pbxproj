@@ -14,6 +14,8 @@
 		5360F61D20A95A0D00A88438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5360F61B20A95A0D00A88438 /* LaunchScreen.storyboard */; };
 		5360F62020A95A0D00A88438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360F61F20A95A0D00A88438 /* main.m */; };
 		5360F62720A95A3200A88438 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5360F62620A95A3200A88438 /* README.md */; };
+		5360F63020A9945000A88438 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360F62D20A9944F00A88438 /* NSData+Base64.m */; };
+		5360F63120A9945000A88438 /* StringEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360F62F20A9944F00A88438 /* StringEncryption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		5360F61E20A95A0D00A88438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5360F61F20A95A0D00A88438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5360F62620A95A3200A88438 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5360F62C20A9944F00A88438 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		5360F62D20A9944F00A88438 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		5360F62E20A9944F00A88438 /* StringEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEncryption.h; sourceTree = "<group>"; };
+		5360F62F20A9944F00A88438 /* StringEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEncryption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 		5360F60F20A95A0D00A88438 /* EncryptionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5360F62B20A9944F00A88438 /* AES */,
 				5360F61020A95A0D00A88438 /* AppDelegate.h */,
 				5360F61120A95A0D00A88438 /* AppDelegate.m */,
 				5360F61320A95A0D00A88438 /* ViewController.h */,
@@ -72,6 +79,17 @@
 				5360F61F20A95A0D00A88438 /* main.m */,
 			);
 			path = EncryptionDemo;
+			sourceTree = "<group>";
+		};
+		5360F62B20A9944F00A88438 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				5360F62C20A9944F00A88438 /* NSData+Base64.h */,
+				5360F62D20A9944F00A88438 /* NSData+Base64.m */,
+				5360F62E20A9944F00A88438 /* StringEncryption.h */,
+				5360F62F20A9944F00A88438 /* StringEncryption.m */,
+			);
+			path = AES;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5360F61520A95A0D00A88438 /* ViewController.m in Sources */,
+				5360F63020A9945000A88438 /* NSData+Base64.m in Sources */,
+				5360F63120A9945000A88438 /* StringEncryption.m in Sources */,
 				5360F62020A95A0D00A88438 /* main.m in Sources */,
 				5360F61220A95A0D00A88438 /* AppDelegate.m in Sources */,
 			);
