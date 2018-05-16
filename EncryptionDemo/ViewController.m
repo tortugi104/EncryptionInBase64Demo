@@ -12,7 +12,7 @@
 #import "NSData+Base64.h"
 #import "StringEncryption.h"
 
-#define KServiceKey @"0366D8637F9C6B21"
+#define KServiceKey @"0123456789012345"
 
 @interface ViewController ()
 
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     //To Encode
-    NSString *stringInBase64 = [self encryptString:@"STRING YOU WANT TO ENCODE"];
+    NSString *stringInBase64 = [self encryptString:@"STRING U WANT TO CONVERT"];
     NSLog(@"%@",stringInBase64);
 
     //To decode
@@ -35,8 +35,7 @@
 
 
 #pragma mark - Encryption/Decryption
--(NSString *)encryptString:(NSString *)_secret
-{
+-(NSString *)encryptString:(NSString *)_secret {
     NSData *_secretData = [_secret dataUsingEncoding:NSUTF8StringEncoding];
     CCOptions padding = kCCOptionPKCS7Padding;
     
@@ -47,8 +46,7 @@
     return finalEncrypt;
 }
 
--(NSString *)decryptString:(NSString *)finalEncrypt
-{
+-(NSString *)decryptString:(NSString *)finalEncrypt {
     CCOptions padding = kCCOptionPKCS7Padding;
     NSData *dataToDecrypt = [NSData dataWithBase64EncodedString:finalEncrypt];
     
